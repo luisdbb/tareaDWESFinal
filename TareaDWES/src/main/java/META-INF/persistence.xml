@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" 
+	xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence">
+		<persistence-unit name="transportes" transaction-type="RESOURCE_LOCAL">
+		<class>modelo.Viaje</class>
+		<class>modelo.Linea</class>
+		<class>modelo.LineasParada</class>
+		<class>modelo.Parada</class>
+		<class>modelo.TransbordosViaje</class>
+		<class>modelo.Usuario</class>
+		<class>modelo.Bono</class>
+		<class>modelo.ViajeLineas</class>
+		<validation-mode>NONE</validation-mode>
+		
+			<properties>
+			<!-- JPA properties -->
+			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
+			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/bdtransportesfinal" />
+			<property name="javax.persistence.jdbc.user" value="root" />
+			<property name="javax.persistence.jdbc.password" value="" />
+			<!-- Hibernate properties -->
+			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />
+			<property name="hibernate.show_sql" value="false" />
+			<property name="hibernate.format_sql" value="false" />
+			<property name="hibernate.hbm2ddl.auto" value="none" />
+		</properties>
+	</persistence-unit>
+</persistence>
